@@ -64,10 +64,11 @@ const FeatureCard = ({ icon: Icon, title, description, details }: { icon: React.
     <motion.div
       variants={{
         hidden: { opacity: 0, y: 15 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+        hover: { y: -8, transition: { duration: 0.3, ease: "easeOut" } }
       }}
       whileHover="hover"
-      className="bg-brand-charcoal border border-brand-grey/30 p-6 rounded-2xl hover:border-brand-blue/60 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(0,123,255,0.15)] transition-all duration-300 group cursor-pointer flex flex-col h-full"
+      className="bg-brand-charcoal border border-brand-grey/30 p-6 rounded-2xl hover:border-brand-blue/60 hover:shadow-[0_8px_30px_rgba(0,123,255,0.15)] transition-colors transition-shadow duration-300 group cursor-pointer flex flex-col h-full"
       onClick={() => setIsExpanded(!isExpanded)}
     >
       <motion.div 
